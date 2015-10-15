@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="Salon">
+    <head>
+        <script type="text/javascript"  src="lib/angular.min.js"></script>
+        <script src="lib/jquery.min.js"></script>
+        <script src="lib/bootstrap.min.js"></script>
+        <script type="text/javascript"  src="lib/angularfire.min.js"></script>
+        <script type="text/javascript"  src="lib/angular-route.min.js"></script>
+        <script type="text/javascript"  src="lib/scrollglue.js"></script>
+        <script type="text/javascript"  src="lib/firebase.js"></script>
+        <script type="text/javascript"  src="lib/ng-tags-input.min.js"></script>
+        <script type="text/javascript"  src="lib/ng-switch.min.js"></script>
+        <script type="text/javascript"  src="lib/ui-bootstrap-tpls-0.12.0.min.js"></script>
+        <script type="text/javascript"  src="lib/bootstrap-select.min.js"></script>
+        <script type="text/javascript"  src="lib/angular-strap.min.js"></script>
+        <script type="text/javascript"  src="lib/angular-strap.tpl.min.js"></script>
+        <script type="text/javascript"  src="app/app.js"></script> 
+        <script type="text/javascript"  src="app/controllers/AuthController.js"></script>
+        <script type="text/javascript"  src="app/controllers/RootController.js"></script>
+        <script type="text/javascript"  src="app/controllers/HomeController.js"></script>
+        <script type="text/javascript"  src="app/controllers/ChatController.js"></script>
+        <script type="text/javascript"  src="app/directives/NaviBar.js"></script>     
+        <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-select.min.css">
+        <link rel="stylesheet" href="css/ng-switch/ng-switch.min.css" >
+        <link rel="stylesheet" href="css/ng-tags/ng-tags-input.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="css/naviBar.css">
+        <link rel="stylesheet" href="css/bubble.css">
+
+        <title></title>
+       
+    </head>
+    <body >
+        
+       <div ng-controller="AppCtrl">
+           <div ng-view></div>
+       </div> 
+    </body>
+</html>

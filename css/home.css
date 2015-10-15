@@ -1,0 +1,144 @@
+*
+{
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+}
+.NewRoom
+{
+    position: relative;
+    left: 25%;
+
+    width: 50%;
+    height: 10%;
+
+    resize: none;
+}
+.NewRoomButton
+{
+    position: relative;
+    left: 62%;
+
+    width: 50%;
+    height: 10%;
+
+    resize: none;
+}
+.roomsContent
+{
+    position: relative;
+    left: 15%;
+
+    display: block;
+    float: left;
+
+    width: 40%;
+    margin: 0;
+}
+.others
+{
+    position: relative;
+    left: 16%;
+
+    display: block;
+    float: left;
+
+    width: 25%;
+}
+.room
+{
+    display: block;
+    overflow: auto;
+
+    width: 100%;
+}
+.AuthorInfo
+{
+    float: left;
+    clear: none;
+
+    width: 100%;
+}
+.PeopleInRoom
+{
+    float: left;
+    clear: none;
+
+    width: 20%;
+}
+.RoomName
+{
+    float: left;
+    clear: none;
+
+    width: 80%;
+}
+.RoomDescription
+{
+    float: left;
+    clear: none;
+
+    width: 100%;
+}
+.RoomTags
+{
+    float: left;
+    clear: none;
+
+    width: 100%;
+}
+
+.left-menu
+{
+    position: fixed;
+
+    overflow: auto;
+
+    width: 15%;
+    height: 100%;
+
+    border-right: #d1d1d1 5px solid;
+    background-color: #e6eaee;
+}
+.right-menu
+{
+    position: fixed;
+    left: 80%;
+
+    overflow-y: auto;
+
+    width: 20%;
+    height: 120%;
+
+    border-left: #d1d1d1 3px solid;
+    background-color: #e6eaee;
+}
+.roomReminder
+{
+    position: relative;
+    left: 25%;
+}
+.naviColor
+{
+    background-color: blue;
+}
+.NewRoomClass
+{
+    position: relative;
+    left: 25%;
+}
+.roomThumNail
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.roomThumNail:hover
+{
+    background-color: #e9edf0;
+}
+button.btn.btn-default
+{
+    position: relative;
+    left: 25%;
+}

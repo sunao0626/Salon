@@ -1,0 +1,8 @@
+.PeopleInChat {
+	padding: 20px;
+    width: 50%;
+    height: 377px;
+    border: #D1D1D1 1px solid; 
+    overflow-x: hidden;   
+    background-color: white;
+}

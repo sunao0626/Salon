@@ -1,0 +1,85 @@
+/*body {
+    overflow-x: hidden;
+}*/
+body {
+    font-family: Verdana;
+    font-size: 14px;
+    margin: 0;
+    background: #E9E9E9;
+}
+.room-head {
+    margin-top: -35px;
+    padding: 20px;
+    border-bottom: 2px solid #CCCCCC;
+    padding-bottom: 8px;
+}
+.prof-img {
+    vertical-align: bottom;
+}
+.welcome-panel {
+    padding-right: 20px;
+}
+.cust-text {
+    width: 22%;
+    display: initial;
+    vertical-align: middle;
+    margin-left: 11px;
+}
+.messages {
+    margin: 20px;
+    border: 1px solid #e8e7e8;
+}
+
+
+.join-room {
+    margin-left: 5px;
+}
+.messages {
+    height: 377px;
+    overflow: auto;
+    border: 1px solid #e8e7e8;
+}
+.message {
+    border-bottom: 1px solid #c7c7c7;
+    padding: 3px;
+    padding-left: 10px;
+    background: #fff;
+    height: 75px;
+    -webkit-transition: background 0.5s;
+}
+.message img {
+    vertical-align: baseline;
+    margin-right: 9px;
+}
+.chat-input {
+    /*position: absolute;
+    bottom: 0px;*/
+    width: 93%;
+    text-align: center;
+    margin-bottom: 14px;
+    padding-left: 8px;
+}
+.form-control{
+    width: 100%;
+    
+}
+.back-btn {
+    vertical-align: bottom;
+    margin-left: 20px;
+}
+.MsgOpt {
+    text-align: left;
+}
+button.tag{
+    margin-right: 5px;
+    margin-right: 5px;
+}
+.room {
+    margin: 0 auto;
+    width: 500px;
+    max-height: 500px;
+    margin-top: 15px;
+    background:#FFFFFF;
+    padding: 15px;
+    left: 20%;
+}

@@ -1,0 +1,103 @@
+<div class="left-menu">
+    <li><h3>ComingSoon..</h3></li>
+    <li><h3>ComingSoon..</h3></li>
+    <li><h3>ComingSoon..</h3></li>
+    <li><h3>ComingSoon..</h3></li>
+    <li><h3>ComingSoon..</h3></li>
+    <li><h3>ComingSoon..</h3></li>
+    <li><h3>ComingSoon..</h3></li> 
+</div>
+
+<div class="container" ng-controller="HomeCtrl">
+
+<navi-bar></navi-bar>
+<div class="right-menu" style="background-color:white;">
+
+    <div ng-repeat="followedRoom in rooms |followed: followedRooms " style="padding-top:3%;padding-bottom:2%;height:10%;padding-left:10px;cursor: pointer;"  class="roomThumNail">     
+        <div>
+             <a ng-click="notFollow(followedRoom)" class="btn btn-danger btn-xs" >unfollow</a> 
+            <img ng-src="components/{{followedRoom.roomclass}}.jpg" ng-click="joinChat(followedRoom)" width="50px">
+        </div>
+        
+        <h4 style="text-align:center; display:inline;padding-left:10px;">{{followedRoom.roomname}}<h4>
+        <!--
+        <h3 class="btn btn-primary tag" style="display:inline;">{{followedRoom.InChat}}</h3>
+        <h3 class="btn btn-success tag" style="display:inline;">{{followedRoom.InFollow}}</h3>
+        -->
+    </div>
+</div>
+</br>
+<input class="form-control NewRoom" rows="1" ng-click="isNew = true; roomName = '';" ng-model="roomName" placeholder="Room Name"></input>
+
+
+<div ng-show="isNew == true" >
+    
+    
+    <select  class="btn btn-info NewRoomClass" ng-model="roomClass"   ng-options="m.name as m.name for m in classes" placeholder="Classification" data-live-search="true" data-style="btn-info"  bs-select > 
+    </select>   
+    <textarea class="form-control NewRoom" rows="1" width="30px" ng-model="src" placeholder="SRC"></textarea>
+    <!--
+    <button type="button" class="btn btn-default NewRoomClass" ng-model="roomClass" placeholder="Classification" data-html="1" ng-options="m.name as m.name for m in classes" bs-select>
+     Action <span class="caret"></span>
+    </button>
+    -->
+
+
+    <textarea class="form-control NewRoom" rows="3" ng-model="Description" placeholder="Room-Description"></textarea>
+    
+    <tags-input class="NewRoom"  ng-model="tags"></tags-input>
+    
+    <div class="btn-group NewRoomButton" role="group" aria-label="...">
+        <button type="button" class="btn btn-danger"  ng-click="CancelNew()">Cancel</button>
+        <button type="button" class="btn btn-info"    ng-disabled="!roomName" ng-click="newRoom()">Create</button>
+    </div>
+</div>
+
+
+<div class="roomsContent">
+    <div ng-repeat="item in rooms  |search:keyword  |reverse" class="room">
+        <div class="AuthorInfo">
+            <img ng-src="components/{{item.roomclass}}.jpg" width="39">
+            {{item.createdby}}
+            
+        </div>
+        <!--
+        <div class="PeopleInRoom btn-group">
+            <h3 class="btn btn-primary tag" style="display:inline;">{{item.InChat}}</h3>
+            <h3 class="btn btn-success tag" style="display:inline;">{{item.InFollow}}</h3>
+        </div>
+        -->
+        <div class="RoomName">
+            <h4 style="color:#7571FF; ">{{item.roomname}}</h4>
+        </div>
+        
+        <div class="RoomDescription">
+            <h4> &nbsp;&nbsp;&nbsp;&nbsp;{{item.description}}</h4>
+        </div>
+        <div class="RoomTags" >
+            <button ng-repeat="tag in item.tags" type="button" class="btn  tag" style="background-color:#DDD" ng-click="AutoSearch(tag.text)" >{{tag.text}}</button>
+        </div>
+
+        <a class="btn btn-success btn-xs pull-right join-room" href="javascript:" ng-click="followChat(item)" ng-disabled="followed(item)" >follow&nbsp;|&nbsp;{{item.InFollow}}</a>
+        </br>
+        <a class="btn btn-primary btn-xs pull-right join-room" href="javascript:" ng-click="joinChat(item)" >Join<span>&nbsp;|&nbsp;{{item.InChat}}</span></a>
+        </br>
+        <a class="btn btn-danger btn-xs pull-right" ng-show="user.name == item.createdby" ng-click="deleteRoom(item)">Delete</a>
+        <br/>
+    </div>
+    <div class="room" ng-show="rooms.length == 0">
+        <h3>No Rooms Available. Create your own!</h3>
+    </div>
+</div>
+
+<div class="others">
+    <div class="room">
+       <h1 style="text-align:center;">欢迎！</h1> 
+       <h1 style="text-align:center;">欢迎！!</h1>
+       
+    </div>
+   
+    
+</div>
+
+</div>

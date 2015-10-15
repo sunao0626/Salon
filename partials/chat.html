@@ -1,0 +1,69 @@
+<navi-bar></navi-bar>
+<div class="container" ng-controller="ChatCtrl">
+  <label class="pull-right welcome-panel" style="padding-top:10px;" ng-show="user">
+    <a href="#home" ng-click="exitRoom()" class="btn btn-info btn-xs back-btn">Back</a>
+   
+  </label>
+  <br/>
+  <h3 class="room-head">Welcome to {{roomInfo.roomname}}</h3>
+  <div style="clear:both;">
+
+    <div style="float:left;width:55%;position:relative;overflow:hidden;">
+      <div class="messages" style="width:100%;">
+        <img ng-src="{{roomInfo.quote|trustAsResourceUrl}}" width="100%" ></img> 
+       
+      </div>
+    </div>
+
+    <div style="float:left;width:30%;margin-left:1%;">
+      <div class="messages" scroll-glue>
+
+        <div ng-repeat="msgs in chatMessages" class="message">
+         
+          <div style="position:relative;float:left;display:inline;padding-top:10px;" ng-hide="msgs.postedby==user.name">
+            <img ng-src="{{msgs.userimg}}" width="30" style="float:left;padding-top:15px;" class="img-rounded" />
+          </div>
+          <div  ng-class="{'bubble--alt bubble':msgs.postedby==user.name,'bubble':msgs.postedby!=user.name}">
+            {{msgs.message}}  
+          </div>    
+          <!--
+          <div>
+            </br></br></br>
+            <small class="text-muted "style="position:relative;float:right;">{{msgs.posteddate | date:'yyyy-MM-dd HH:mm:ss'}}</small>
+            </div>-->
+        </div>
+        
+        <div class="message" ng-show="!chatMessages">
+          <h4>Loading Please wait</h4>
+        </div>
+        <div class="message" ng-show="chatMessages && chatMessages.length == 0">
+          <h4>No message yet!</h4>
+        </div>
+      </div>
+    </div>
+
+    <div style="float:left;width:12%;">
+
+      <div class="messages" style="width:100%;">        
+          <div ng-repeat="person in roomInfo.chater" style="border: #D1D1D1 1px solid; ">
+           
+              <h5 style="text-align:center;display:inline;color:blue;">{{person}}</h5>
+          </div>
+      </div>
+    </div>
+
+
+  </div>
+  
+
+
+
+
+
+  <div class="chat-input">
+   
+        <h3 class="pull-left">Anonymity:<switch id="enabled" name="enabled" ng-model="Anonymity" class="green"></switch></h3>
+    
+    <input type="text" class="form-control" placeholder="Send Message" ng-model="message" ng-keypress="sendMessage($event)" autofocus>
+  </div>
+</div>

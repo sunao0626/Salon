@@ -1,0 +1,89 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.NewRoom
+{
+	position: relative;
+	resize:none;
+	width: 50%;
+	height: 10%;
+	left: 25%;
+}
+.NewRoomButton
+{
+	position: relative;
+	resize:none;
+	width: 50%;
+	height: 10%;
+	left: 62%;
+}
+.room
+{
+    display: block;
+    overflow: auto;
+    width: 50%;
+    margin: 50px auto 0 auto;
+}
+.AuthorInfo
+{
+    float: left;
+    clear: none;
+    width: 100%;
+}
+.PeopleInRoom
+{		
+	
+    float: left;
+    clear: none;
+    width: 20%;
+}
+.RoomName
+{
+    float: left;
+    clear: none;
+    width: 80%;
+}
+.RoomDescription
+{
+    float: left;
+    clear: none;
+    width: 100%;
+}
+.RoomTags
+{
+    float: left;
+    clear: none;
+    width: 100%;
+}
+
+.left-menu
+{
+    position: absolute;
+    background-color: #E0E0E0;   
+    width: 15%;
+    height: 100%;
+    border-right: #C3C3C3 5px solid; 
+    overflow: auto;
+}
+.right-menu
+{
+    position: absolute;
+    background-color: #E0E0E0;   
+    width: 15%;
+    left: 85%;
+    height: 100%;
+    border-left: #C3C3C3 5px solid; 
+    overflow: auto;
+}
+.roomReminder
+{
+	position: relative;
+	left: 25%
+}
+.naviColor
+{
+    background-color: blue;
+}
